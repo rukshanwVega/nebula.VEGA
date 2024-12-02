@@ -8,6 +8,7 @@
     <choice value="PandarQT64" />
     <choice value="PandarQT128" />
     <choice value="PandarXT32" />
+    <choice value="PandarXT16" />
     <choice value="PandarXT32M" />
   </arg>
   <arg name="launch_hw" default="true" description="Whether to connect to a real sensor (true) or to accept packet messages (false).">

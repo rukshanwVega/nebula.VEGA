@@ -11,6 +11,7 @@
 #include "nebula_decoders/nebula_decoders_hesai/decoders/pandar_qt128.hpp"
 #include "nebula_decoders/nebula_decoders_hesai/decoders/pandar_qt64.hpp"
 #include "nebula_decoders/nebula_decoders_hesai/decoders/pandar_xt32.hpp"
+#include "nebula_decoders/nebula_decoders_hesai/decoders/pandar_xt16.hpp"
 #include "nebula_decoders/nebula_decoders_hesai/decoders/pandar_xt32m.hpp"
 
 // #define WITH_DEBUG_STD_COUT_HESAI_CLIENT // Use std::cout messages for debugging
@@ -40,6 +41,9 @@ HesaiDriver::HesaiDriver(
       break;
     case SensorModel::HESAI_PANDARXT32:
       scan_decoder_ = initialize_decoder<PandarXT32>(sensor_configuration, calibration_data);
+      break;
+    case SensorModel::HESAI_PANDARXT16:
+      scan_decoder_ = initialize_decoder<PandarXT16>(sensor_configuration, calibration_data);
       break;
     case SensorModel::HESAI_PANDARXT32M:
       scan_decoder_ = initialize_decoder<PandarXT32M>(sensor_configuration, calibration_data);
